@@ -1,0 +1,8 @@
+BEGIN ISOLATION LEVEL REPEATABLE READ;
+
+SELECT * FROM doctors WHERE on_call = TRUE ORDER BY id;
+
+UPDATE doctors
+SET on_call = FALSE
+WHERE id = 2;
+

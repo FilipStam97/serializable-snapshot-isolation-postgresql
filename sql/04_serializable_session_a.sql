@@ -1,0 +1,11 @@
+BEGIN ISOLATION LEVEL SERIALIZABLE;
+
+SELECT *
+FROM doctors
+WHERE on_call = TRUE;
+
+UPDATE doctors
+SET on_call = FALSE
+WHERE id = 1;
+
+
